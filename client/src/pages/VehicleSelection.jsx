@@ -12,7 +12,7 @@ const VehicleSelection = () => {
 
 
   useEffect(() => {
-    axios.get('http://localhost:5000/vehicles').then(response => {
+    axios.get('https://criminal-hunt-backend.onrender.com/vehicles').then(response => {
       setVehicles(response.data);
       console.log(response.data);
     });
