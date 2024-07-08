@@ -23,7 +23,7 @@ const VehicleSelection = () => {
     const copChoices = [
       { name: selectedCop, city: selectedCity, vehicle: selectedVehicle }
     ];
-    axios.post('http://localhost:5000/capture', { copChoices }).then(response => {
+    axios.post('https://criminal-hunt-backend.onrender.com/capture', { copChoices }).then(response => {
       navigate('/result', { state:{ result:response.data} });
     })
     .catch(error => {
