@@ -1,9 +1,8 @@
-
 # Fugitive Capture Game
 
 ## Project Description
 
-This project is a simple web application where three cops try to capture a fugitive hiding in one of five cities. Each cop selects a city to investigate and a vehicle based on the city's distance. The system simulates the fugitive's location and determines if any cop successfully captures the fugitive. 
+This project is a simple web application where three cops try to capture a fugitive hiding in one of five cities. Each cop selects a city to investigate and a vehicle based on the city's distance. The system simulates the fugitive's location and determines if any cop successfully captures the fugitive.
 
 ## Technologies Used
 
@@ -30,16 +29,18 @@ This project is a simple web application where three cops try to capture a fugit
 ## Gameplay
 
 1. **City Selection**: Each cop independently chooses one city from the following to investigate:
-    - Yapkashnagar (60 KM)
-    - Lihaspur (50 KM)
-    - Narmis City (40 KM)
-    - Shekharvati (30 KM)
-    - Nuravgram (20 KM)
+
+   - Yapkashnagar (60 KM)
+   - Lihaspur (50 KM)
+   - Narmis City (40 KM)
+   - Shekharvati (30 KM)
+   - Nuravgram (20 KM)
 
 2. **Vehicle Selection**: Based on the chosen city's distance, each cop selects an electric vehicle considering its range and availability:
-    - EV Bike (60 KM) - 2 available
-    - EV Car (100 KM) - 1 available
-    - EV SUV (120 KM) - 1 available
+
+   - EV Bike (60 KM) - 2 available
+   - EV Car (100 KM) - 1 available
+   - EV SUV (120 KM) - 1 available
 
 3. **Result**: The system determines if any cop successfully found the fugitive. If found, it displays the name of the cop who made the successful capture.
 
@@ -73,37 +74,48 @@ This project is a simple web application where three cops try to capture a fugit
 ### Backend
 
 1. Clone the repository:
-    ```sh
-    git clone https://github.com/yourusername/fugitive-capture-game.git
- 
-    ```
 
-2. Install dependencies:
-    ```sh
-    npm install
-    ```
+   ```sh
+   git clone https://github.com/Sayaliamale1/criminal-hunt.git
 
-3. Run the server:
-    ```sh
-    npm run dev
-    ```
+   ```
+
+2. Navigate to the frontend directory:
+
+   ```sh
+   cd ../server
+
+   ```
+
+3. Install dependencies:
+
+   ```sh
+   npm install
+   ```
+
+4. Run the server:
+   ```sh
+   npm run dev
+   ```
 
 ### Frontend
 
 1. Navigate to the frontend directory:
-    ```sh
-    cd ../client
-    ```
+
+   ```sh
+   cd ../client
+   ```
 
 2. Install dependencies:
-    ```sh
-    npm install
-    ```
+
+   ```sh
+   npm install
+   ```
 
 3. Run the frontend application:
-    ```sh
-    npm run dev
-    ```
+   ```sh
+   npm run dev
+   ```
 
 ### Deployment
 
@@ -125,6 +137,7 @@ Returns the list of available vehicles with their range and count.
 Accepts the cop choices and determines if the fugitive is captured.
 
 **Request Body**:
+
 ```json
 {
   "copChoices": [
@@ -136,17 +149,19 @@ Accepts the cop choices and determines if the fugitive is captured.
 ```
 
 **Response**:
+
 ```json
 {
   "success": true,
   "capturingCop": "Cop 1"
 }
 ```
+
 or
+
 ```json
 {
   "success": false,
   "message": "The fugitive escaped!"
 }
 ```
-
