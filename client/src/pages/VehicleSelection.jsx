@@ -27,7 +27,7 @@ const VehicleSelection = () => {
       navigate('/result', { state:{ result:response.data} });
     })
     .catch(error => {
-  alert(error.response.data.message);
+  alert(error);
   
     });
   };
