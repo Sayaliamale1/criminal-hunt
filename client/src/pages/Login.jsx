@@ -12,7 +12,7 @@ const Login = () => {
 //   const { selectedCop } = location.state || {};
 
       useEffect(() => {
-    axios.get('http://localhost:5000/cops').then(response => {
+    axios.get('https://criminal-hunt-backend.onrender.com/cops').then(response => {
         console.log(response.data);
       setCops(response.data);
       

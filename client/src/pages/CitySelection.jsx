@@ -12,7 +12,7 @@ const CitySelection = () => {
 
 
   useEffect(() => {
-    axios.get('http://localhost:5000/cities').then(response => {
+    axios.get('https://criminal-hunt-backend.onrender.com/cities').then(response => {
       setCities(response.data);
       
     });
